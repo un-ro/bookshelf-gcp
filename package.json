@@ -1,20 +1,24 @@
 {
   "name": "bookshelf-gcp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Submission dicoding, kelas Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./src/server.js",
+    "lint": "eslint ./"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node-js"
+  ],
+  "author": "un-ro",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^20.2.1"
+    "@hapi/hapi": "^20.2.1",
+    "nanoid": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^2.0.15"
   }
 }
