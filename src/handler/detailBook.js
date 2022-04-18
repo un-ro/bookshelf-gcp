@@ -2,7 +2,7 @@ const books = require('./books');
 
 const detailBook = (request, h) => {
   // Get id from parameter path
-  const { bookId } = request.params;
+  const {bookId} = request.params;
 
   // Search item based on Id
   const book = books.filter((item) => item.id === bookId)[0];

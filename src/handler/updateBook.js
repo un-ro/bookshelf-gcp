@@ -2,7 +2,7 @@ const books = require('./books');
 
 const updateBook = (request, h) => {
   // Get id from parameter path
-  const { bookId } = request.params;
+  const {bookId} = request.params;
 
   // Get updated property from user
   const {
@@ -23,7 +23,8 @@ const updateBook = (request, h) => {
   if (readPage > pageCount) {
     return h.response({
       status: 'fail',
-      message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
+      message: 'Gagal memperbarui buku. ' +
+        'readPage tidak boleh lebih besar dari pageCount',
     }).code(400);
   }
 

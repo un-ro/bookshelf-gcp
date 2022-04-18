@@ -2,10 +2,12 @@ const books = require('./books');
 
 const deleteBook = (request, h) => {
   // Get id from parameter path
-  const { bookId } = request.params;
+  const {bookId} = request.params;
 
   // Search Book index based on id
-  const index = books.findIndex((book) => book.id === bookId);
+  const index = books.findIndex((book) =>
+    book.id === bookId,
+  );
 
   if (index !== -1) {
     // Delete from array

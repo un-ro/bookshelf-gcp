@@ -1,4 +1,4 @@
-const { nanoid } = require('nanoid');
+const {nanoid} = require('nanoid');
 const books = require('./books');
 
 const addBook = (request, h) => {
@@ -19,7 +19,8 @@ const addBook = (request, h) => {
   if (readPage > pageCount) {
     return h.response({
       status: 'fail',
-      message: 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount',
+      message: 'Gagal menambahkan buku.' +
+        ' readPage tidak boleh lebih besar dari pageCount',
     }).code(400);
   }
 
